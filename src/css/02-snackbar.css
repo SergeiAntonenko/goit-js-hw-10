@@ -1,0 +1,16 @@
+.form {
+  max-width: 215px;
+}
+
+.delay-input {
+  width: 202px;
+  padding: 3px 5px;
+}
+
+.form-fieldset {
+  margin: 0 0 5px 0;
+}
+
+.form-btn {
+  width: 100%;
+}
