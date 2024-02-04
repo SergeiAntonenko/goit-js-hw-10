@@ -1,42 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>02-snackbar</title>
-    
-    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-651d7991.js">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-8d55dcdd.css">
-  </head>
-  <body>
-    <a class="task-link" href="./index.html">Back to main</a>
+<script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js"></script>
+<script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-651d7991.js"></script>
+<script type="module" crossorigin src="/goit-js-hw-10/assets/02-snackbar-ac84a084.js"></script>
+<link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+<form class="form">
+  <label>
+    Delay (ms)
+    <input class="delay-input" type="number" name="delay" required />
+  </label>
 
-    <form class="form">
-      <label>
-        Delay (ms)
-        <input class="delay-input" type="number" name="delay" required />
-      </label>
+  <fieldset class="form-fieldset">
+    <legend>State</legend>
+    <label>
+      <input type="radio" name="state" value="fulfilled" required />
+      Fulfilled
+    </label>
+    <label>
+      <input type="radio" name="state" value="rejected" required />
+      Rejected
+    </label>
+  </fieldset>
 
-      <fieldset class="form-fieldset">
-        <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
-          Fulfilled
-        </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
-          Rejected
-        </label>
-      </fieldset>
+  <button class="form-btn" type="submit" id="form-btn">
+    Create notification
+  </button>
+</form>
 
-      <button class="form-btn" type="submit" id="form-btn">
-        Create notification
-      </button>
-    </form>
 
-    
-  </body>
-</html>
