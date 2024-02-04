@@ -23,14 +23,3 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
-.task-link {
-  display: block;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.task-link:hover,
-.task-link:focus {
-  color: red;
-}
