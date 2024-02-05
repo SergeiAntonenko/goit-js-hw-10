@@ -29,37 +29,33 @@ function onFormSubmit(e) {
     position: 'topRight',
   };
 
-  if (selectedRadio === 'fulfilled') {
-    const fulfilledPromise = new Promise(resolve => {
-      setTimeout(() => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (selectedRadio === 'fulfilled') {
         iziToast.show({
           ...toastOptions,
           backgroundColor: 'green',
           message: `✅ Fulfilled promise in ${delay}ms`,
         });
         resolve(delay);
-      }, delay);
-    });
-
-    fulfilledPromise.then(delay => {
-      console.log(`✅ Fulfilled promise in ${delay}ms`);
-    });
-  } else {
-    const rejectedPromise = new Promise((_, reject) => {
-      setTimeout(() => {
+      } else {
         iziToast.show({
           ...toastOptions,
           backgroundColor: 'darkred',
           message: `❌ Rejected promise in ${delay}ms`,
         });
         reject(new Error(`❌ Rejected promise in ${delay}ms`));
-      }, delay);
-    });
+      }
+    }, delay);
+  });
 
-    rejectedPromise.catch(error => {
+  promise
+    .then(delay => {
+      console.log(`✅ Fulfilled promise in ${delay}ms`);
+    })
+    .catch(error => {
       console.error(error.message);
     });
-  }
 
   form.reset();
 }
